@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('planets', function (Blueprint $table) {
+        Schema::create('solarsystems', function (Blueprint $table) {
             $table->id();
-            $table->string('name')-unique();
-            $table->double('size');
-            $table->string('solarsystem');
+            $table->string('name')->unique();
+            $table->string('size');
+            $table->string('unitCode', 2);
             $table->timestamps();
+
+            $table->foreign('unitCode')->references('unitCode')->on('unitcodes');
         });
     }
 
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('planets');
+        Schema::dropIfExists('solarsystems');
     }
 };
