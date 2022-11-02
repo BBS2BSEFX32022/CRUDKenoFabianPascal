@@ -20,7 +20,7 @@ class solarsystemsFactory extends Factory
         return [
             'name' => fake()->word(),
             'size' => fake()->randomFloat(1, 69, 420),
-            'unitCode' => \App\Models\unitcodes::pluck('unitCode')-random(),
+            'unitCode' => \App\Models\unitcodes::pluck('unitCode')->random(),
         ];
     }
 }

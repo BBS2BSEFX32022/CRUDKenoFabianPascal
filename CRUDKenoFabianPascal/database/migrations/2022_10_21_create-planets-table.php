@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('planets', function (Blueprint $table) {
             $table->id();
-            $table->string('name')-unique();
+            $table->string('name')->unique();
             $table->double('size');
             $table->string('unitCode', 2);
             $table->string('solarSystem');

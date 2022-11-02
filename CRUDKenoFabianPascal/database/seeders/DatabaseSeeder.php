@@ -20,5 +20,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-    }
+
+        \App\Models\unitcodes::factory(1)->create();
+        \App\Models\solarsystems::factory(3)->create();
+        \App\Models\planets::factory(20)->create();
+
+        }
 }

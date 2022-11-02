@@ -19,7 +19,7 @@ class unitcodesFactory extends Factory
     {
         return [
             'unitCode' => 'tk',
-            'name' => 'Thousands of kilometers',
+            'unitName' => 'Thousands of kilometers',
         ];
     }
 }

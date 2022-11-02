@@ -20,8 +20,8 @@ class planetsFactory extends Factory
         return [
             'name' => fake()->word(),
             'size' => fake()->randomFloat(1, 10, 52),
-            'unitCode' => \App\Models\unitcodes::pluck('unitCode')-random(),
-            'solarSystem' => \App\Models\solarsystems::pluck('solarSystem')-random(),
+            'unitCode' => \App\Models\unitcodes::pluck('unitCode')->random(),
+            'solarSystem' => \App\Models\solarsystems::pluck('name')->random(),
         ];
     }
 }
