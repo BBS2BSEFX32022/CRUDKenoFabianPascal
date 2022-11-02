@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('solarsystems', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('size');
+            $table->double('size');
             $table->string('unitCode', 2);
             $table->timestamps();
 
