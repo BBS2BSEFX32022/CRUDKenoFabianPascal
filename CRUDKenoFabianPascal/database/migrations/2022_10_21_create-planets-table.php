@@ -17,10 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('name')-unique();
             $table->double('size');
+            $table->string('unitCode', 2);
             $table->string('solarSystem');
             $table->timestamps();
 
             $table->foreign('solarSystem')->references('name')->on('solarsystems');
+            $table->foreign('unitCode')->references('unitCode')->on('unitcodes');
         });
     }
 
